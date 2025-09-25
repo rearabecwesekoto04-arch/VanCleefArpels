@@ -1,0 +1,346 @@
+/* ===== RESET & BASE STYLES ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px; /* Base for rem units */
+}
+
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fdfdfd;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  background-color: #80003c;
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+.site-header .logo img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.site-header h1 {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.site-header .header-subtitle,
+.site-header .header-tagline {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== NAVIGATION ===== */
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: #333;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  background-color: #80003c;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.main-nav a:focus {
+  outline: 2px solid #5a002a;
+  outline-offset: 2px;
+}
+
+/* ===== SUB-NAVIGATION (between product categories) ===== */
+.sub-nav {
+  text-align: center;
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.sub-nav a {
+  color: #80003c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sub-nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  padding: 2rem 1rem;
+}
+
+/* ===== HOME PAGE ===== */
+.home-main {
+  padding: 2rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.intro-text {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.intro-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #80003c;
+}
+
+/* ===== ABOUT US PAGE ===== */
+.about-content {
+  padding: 2rem;
+}
+
+.about-hero {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-hero img {
+  max-width: 200px;
+  border-radius: 4px;
+}
+
+.about-text p,
+.about-text h2 {
+  margin-bottom: 1rem;
+}
+
+.mission,
+.vision {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border-left: 4px solid #80003c;
+}
+
+.mission h2,
+.vision h2 {
+  color: #80003c;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== CONTACT PAGE ===== */
+.contact-main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-text {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.contact-branches {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.branch {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  width: 300px;
+  text-align: center;
+}
+
+.branch h2 {
+  color: #80003c;
+  margin-bottom: 1rem;
+}
+
+.branch address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.branch a {
+  color: #80003c;
+  text-decoration: underline;
+}
+
+.branch a:hover {
+  color: #5a002a;
+}
+
+/* ===== PRODUCTS / JEWELRY / WATCHES / FRAGRANCES PAGES ===== */
+.collection-main {
+  padding: 1rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.product-item {
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.product-item:hover {
+  transform: scale(1.02);
+}
+
+.product-item img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.product-item figcaption {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Mobile: Stack navigation, reduce padding, adjust fonts */
+@media (max-width: 768px) {
+  .site-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-branches {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .site-header h1 {
+    font-size: 2rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .site-header {
+    padding: 2rem;
+  }
+}
